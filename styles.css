@@ -1,26 +1,30 @@
-#cupCanvas {
-    height: 80vh;
-    width: 98vw;
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+body {
+    background-color: rgb(15, 15, 15);
+}
+
+#header {
     position: absolute;
-    top: 20px;
-    left: 0;
+    top: 24px;
+    left: 24px;
+    z-index: 100;
+    color: white;
+    font-size: 28px;
+    font-family: 'Dosis', sans-serif;
 }
 
-.cups {
-    background-color: rgba(0, 255, 0, 0.1);
-    position: relative;
-    height: 80vh;
-}
-
-.innerCups {
-    background-color: rgba(180, 190, 255);
-    z-index: 10;
+.masking {
     position: absolute;
-    bottom: 0;
+    z-index: 101;
+    opacity: 1;
+    transition: 0.3s;
 }
 
-.p5Canvas {
-    z-index: 5;
+.masking:hover {
+    opacity: 0;
+}
+
+.rings {
+    position: absolute;
+    z-index: 100;
+    display: none;
 }
